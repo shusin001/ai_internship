@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(16, 185, 129, 0.12), transparent 40%),
+    radial-gradient(circle at 88% 12%, rgba(251, 146, 60, 0.12), transparent 38%),
+    linear-gradient(180deg, #f8faf9 0%, #f6f7f8 100%);
+  @apply text-slate-900 antialiased;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200/80 bg-white/95 p-6 shadow-soft backdrop-blur-sm;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none ring-brand-600 transition focus:border-brand-600 focus:ring-2;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-brand-100 bg-brand-50 px-4 py-2.5 text-sm font-semibold text-brand-700 transition hover:bg-brand-100;
+}
+
+.app-shell {
+  @apply mx-auto w-full max-w-[90rem] px-4 sm:px-6 lg:px-8;
+}
+
+@keyframes company-marquee-scroll {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.company-marquee-layer {
+  @apply absolute inset-x-0 overflow-hidden;
+}
+
+.company-marquee {
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation: company-marquee-scroll 34s linear infinite;
+}
+
+.company-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 12ch;
+  padding-right: 12ch;
+}
+
+.company-name-bg {
+  @apply whitespace-nowrap text-4xl font-semibold italic text-slate-500/40 md:text-5xl;
+  font-family: "Snell Roundhand", "Apple Chancery", "Segoe Script", "Brush Script MT", cursive;
+}
+
+.company-marquee-fade {
+  @apply absolute inset-0 bg-gradient-to-r from-white/85 via-white/55 to-white/85;
+}

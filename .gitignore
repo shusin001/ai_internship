@@ -1,0 +1,24 @@
+# Environments & Secrets
+.env
+.venv
+venv/
+ENV/
+
+# Node modules (Frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python (Backend)
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+
+# Build outputs
+frontend/dist/
+frontend/build/
+
+# OS specific
+.DS_Store
+Thumbs.db
